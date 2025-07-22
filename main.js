@@ -1,16 +1,16 @@
 // Write your JavaScript code here!
 const gravityFactors = {
-  "Pluto": 0.06,
-  "Neptune": 1.19,
-  "Uranus": 0.92,
-  "Saturn": 0.93,
-  "Jupiter": 2.34,
-  "Mars": 0.38,
-  "Moon": 0.166,
-  "Earth": 1,
-  "Venus": 0.91,
-  "Mercury": 0.38,
-  "Sun": 27.01
+  "Pluto": 0.06,     
+  "Neptune": 1.148,  
+  "Uranus": 0.917,   
+  "Saturn": 1.139,   
+  "Jupiter": 2.64,   
+  "Mars": 0.3895,    
+  "Moon": 0.1655,    
+  "Earth": 1.0,      
+  "Venus": 0.9032,   
+  "Mercury": 0.377,  
+  "Sun": 27.9        
 };
 
 document.getElementById("calculate-button").addEventListener("click", function () {
