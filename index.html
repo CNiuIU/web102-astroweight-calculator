@@ -9,20 +9,23 @@
 <body>
   <!-- Write your markup here  -->
 <input id="user-weight" type="text" placeholder="Weight (lbs)" />
-<select id="planet-select">
-    <option value="0.38">Mercury</option>
-    <option value="0.91">Venus</option>
-    <option value="0.38">Mars</option>
-    <option value="2.34">Jupiter</option>
-    <option value="0.93">Saturn</option>
-    <option value="0.92">Uranus</option>
-    <option value="1.19">Neptune</option>
-    <option value="0.06">Pluto</option>
+<select id="planets">
+     <option value="Pluto">Pluto</option>
+    <option value="Neptune">Neptune</option>
+    <option value="Uranus">Uranus</option>
+    <option value="Saturn">Saturn</option>
+    <option value="Jupiter">Jupiter</option>
+    <option value="Mars">Mars</option>
+    <option value="Moon">Moon</option>
+    <option value="Earth">Earth</option>
+    <option value="Venus">Venus</option>
+    <option value="Mercury">Mercury</option>
+    <option value="Sun">Sun</option>
   </select>
 
-  <button onclick="calculateWeight()">Calculate</button>
-
-  <p id="result"></p>
+  <button id="calculate-button">Calculate</button>
+<p id="output"></p>
+  
   <script src="main.js" charset="utf-8"></script>
 </body>
 
