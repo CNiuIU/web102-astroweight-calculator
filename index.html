@@ -12,23 +12,24 @@
   <h1>Astro Weight Calculator</h1>
   <!-- Write your markup here  -->
 <input id="user-weight" type="text" placeholder="Weight (lbs)" />
-<select id="planets">
-     <option value="Pluto">Pluto</option>
-    <option value="Neptune">Neptune</option>
-    <option value="Uranus">Uranus</option>
-    <option value="Saturn">Saturn</option>
-    <option value="Jupiter">Jupiter</option>
-    <option value="Mars">Mars</option>
-    <option value="Moon">Moon</option>
-    <option value="Earth">Earth</option>
-    <option value="Venus">Venus</option>
-    <option value="Mercury">Mercury</option>
-    <option value="Sun">Sun</option>
-  </select>
+
+<select id="planets"></select>
 
   <button id="calculate-button">Calculate</button>
 <p id="output"></p>
-  
+ 
+<!-- Checkbox to toggle Pluto -->
+<label>
+  <input type="checkbox" id="toggle-pluto" /> Pluto is not real
+</label>
+
+<br><br>
+<h2>New planet</h2>
+<!-- Inputs to add a new planet -->
+<input type="text" id="new-planet-name" placeholder="New planet name" />
+<input type="number" id="new-planet-multiplier" placeholder="Gravity multiplier" step="any" />
+<button id="add-planet-button">Add Planet</button>
+
   <script src="main.js" charset="utf-8"></script>
 </body>
 
