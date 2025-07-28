@@ -70,10 +70,12 @@ function handleClickEvent(e) {
 
 // 8. Pluto checkbox functionality
 document.getElementById("toggle-pluto").addEventListener("change", function (e) {
+  //looking for toggle-pluto, adds eventListener for "change" ie checking the box (e for event)
   const isChecked = e.target.checked;
   if (isChecked) {
     // Remove Pluto from the list
     planets = planets.filter(([name]) => name !== "Pluto");
+    //.filter creates a new array without pluto
   } else {
     // Add Pluto back if it's missing
     const alreadyThere = planets.some(([name]) => name === "Pluto");
@@ -81,21 +83,26 @@ document.getElementById("toggle-pluto").addEventListener("change", function (e) 
       planets.unshift(["Pluto", 0.06]); // Add to beginning
     }
   }
-  // Re-populate dropdown
+  // Re-populate dropdown, clears and rebuilds dropdown menu
   repopulateDropdown();
 });
 
 // 9. Add new planet functionality
 document.getElementById("add-planet-button").addEventListener("click", function () {
+  //another event listener, this time for the add-planet-button
   const nameInput = document.getElementById("new-planet-name");
   const multiplierInput = document.getElementById("new-planet-multiplier");
-
+//holds new input information
   const newName = nameInput.value.trim();
+  //.value takes userinput
+  //.trim removes whitespace at start and end of string
   const newMultiplier = parseFloat(multiplierInput.value);
-
+//takes userinput, converts from string to number, stores in newMultiplier
   if (!newName || isNaN(newMultiplier)) {
     alert("Please enter a valid planet name and gravity multiplier.");
     return;
+    //checks if newName is empty or newMultiplier is not a number
+    //errors if do
   }
 
   // Prevent duplicates
@@ -105,14 +112,16 @@ document.getElementById("add-planet-button").addEventListener("click", function 
   }
 
   planets.push([newName, newMultiplier]);
+  //adding new planet to dropdown
   repopulateDropdown();
+  //refreshes dropdown menu to include the added planet
 
-  // Clear inputs
+  // Clear inputs for any new planets
   nameInput.value = '';
   multiplierInput.value = '';
 });
 
-// Utility: Re-populate dropdown
+// Re-populate dropdown
 function repopulateDropdown() {
   select.innerHTML = '';
   planets.slice().reverse().forEach(([name]) => {
